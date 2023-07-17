@@ -1,17 +1,19 @@
+builtin.c
+
 #include "shell.h"
 
 /**
- * _myexit - exits the shell script or console interfce 
- * @info: Structure containing potential arguments. Used to maintain
- *          constant function prototype or the console of created.
- *  Return: exits with a given exit status is prompted
- *         (0) if info.argv[0] != "exit"
+ * _myexit - exits the shell
+ * @info: Structure containing potential arg. Used to maintain
+ * constant function prototypes.
+ * Return: exits with a given exit status.
+ * (0) if info.argv[0] != "exit"
  */
 int _myexit(info_t *info)
 {
 	int exitcheck;
 
-	if (info->argv[1])  /* If there is an exit arguement it would exit */
+	if (info->argv[1]) /* If there is an exit arg */
 	{
 		exitcheck = _erratoi(info->argv[1]);
 		if (exitcheck == -1)
@@ -30,10 +32,10 @@ int _myexit(info_t *info)
 }
 
 /**
- * _mycd - changes the current directory of the process or the pwd 
- * @info: Structure containing potential arguments. Used to maintain
- *          constant function prototype or console to be created.
- *  Return: Always 0
+ * _mycd - changes the current dir of the process
+ * @info: Structure containing potential arg. Used to maintain
+ * constant function prototypes.
+ * Return: Always 0
  */
 int _mycd(info_t *info)
 {
@@ -47,7 +49,7 @@ int _mycd(info_t *info)
 	{
 		dir = _getenv(info, "HOME=");
 		if (!dir)
-			chdir_ret = /* TODO: what should this? be to change directory */
+			chdir_ret = /* TODO: what should this be? */
 				chdir((dir = _getenv(info, "PWD=")) ? dir : "/");
 		else
 			chdir_ret = chdir(dir);
@@ -80,18 +82,18 @@ int _mycd(info_t *info)
 }
 
 /**
- * _myhelp - changes the current directory of the process to the new pwd
- * @info: Structure containing potential arguments. Used to maintain
- *          constant function prototype or console to be created.
- *  Return: Always 0
+ * _myhelp - changes the current dir of the process
+ * @info: Structure containing potential arg. Used to maintain
+ * constant function prototype.
+ * Return: Always 0
  */
 int _myhelp(info_t *info)
 {
 	char **arg_array;
 
 	arg_array = info->argv;
-	_puts("help call works or cause a prompt to a function. Function not yet implemented \n");
+	_puts("help call works. Function not yet implemented \n");
 	if (0)
-		_puts(*arg_array); /* temp att_unused workaround the console */
+		_puts(*arg_array); /* temp att_unused workaround */
 	return (0);
 }
