@@ -1,6 +1,4 @@
 # 0x16. C - Simple Shell
-
-
 # Compilation
 ## Your shell will be compiled this way:
 
