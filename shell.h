@@ -12,22 +12,22 @@
 #include <fcntl.h>
 #include <errno.h>
 
-/* for read/write buffers */
+/* for read/write bufferss */
 #define READ_BUF_SIZE 1024
 #define WRITE_BUF_SIZE 1024
 #define BUF_FLUSH -1
 
-/* for command chaining */
+/* for command chainingss */
 #define CMD_NORM	0
 #define CMD_OR		1
 #define CMD_AND		2
 #define CMD_CHAIN	3
 
-/* for convert_number() */
+/* for convert_numbers() */
 #define CONVERT_LOWERCASE	1
 #define CONVERT_UNSIGNED	2
 
-/* 1 if using system getline() */
+/* 1 if using system getlines() */
 #define USE_GETLINE 0
 #define USE_STRTOK 0
 
@@ -38,10 +38,10 @@ extern char **environ;
 
 
 /**
- * struct liststr - singly linked list
- * @num: the number field
- * @str: a string
- * @next: points to the next node
+ * struct liststr - singly linked lists
+ * @num: the number fields
+ * @str: a str
+ * @next: points to the next nodes
  */
 typedef struct liststr
 {
@@ -51,26 +51,26 @@ typedef struct liststr
 } list_t;
 
 /**
- *struct passinfo - contains pseudo-arguements to pass into a function,
- *		allowing uniform prototype for function pointer struct
+ *struct passinfo - contains pseudo-arg to pass into a functions,
+ *		allowing uniform prototype for function pointer structs
  *@arg: a string generated from getline containing arguements
  *@argv: an array of strings generated from arg
- *@path: a string path for the current command
- *@argc: the argument count
- *@line_count: the error count
+ *@path: a string path for the current cmd
+ *@argc: the argument counts
+ *@line_count: the error counts
  *@err_num: the error code for exit()s
  *@linecount_flag: if on count this line of input
- *@fname: the program filename
+ *@fname: the program filenames
  *@env: linked list local copy of environ
  *@environ: custom modified copy of environ from LL env
- *@history: the history node
- *@alias: the alias node
+ *@history: the history nodes
+ *@alias: the alias nodes
  *@env_changed: on if environ was changed
  *@status: the return status of the last exec'd command
  *@cmd_buf: address of pointer to cmd_buf, on if chaining
  *@cmd_buf_type: CMD_type ||, &&, ;
- *@readfd: the fd from which to read line input
- *@histcount: the history line number count
+ *@readfd: the fd from which to read line inputs
+ *@histcount: the history line number counts
  */
 typedef struct passinfo
 {
@@ -89,7 +89,7 @@ typedef struct passinfo
 	int env_changed;
 	int status;
 
-	char **cmd_buf; /* pointer to cmd ; chain buffer, for memory mangement */
+	char **cmd_buf; /* pointer to cmd ; chain buffer, for memory mangements */
 	int cmd_buf_type; /* CMD_type ||, &&, ; */
 	int readfd;
 	int histcount;
@@ -101,8 +101,8 @@ typedef struct passinfo
 
 /**
  *struct builtin - contains a builtin string and related function
- *@type: the builtin command flag
- *@func: the function
+ *@type: the builtin cmd flag
+ *@func: the functions
  */
 typedef struct builtin
 {
