@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * _myenv - prints the current environment
+ * _myenv - prints the current environment of the pwd
  * @info: Structure containing potential arguments. Used to maintain
- *          constant function prototype.
+ *          constant function prototype of the console to be created.
  * Return: Always 0
  */
 int _myenv(info_t *info)
@@ -13,9 +13,9 @@ int _myenv(info_t *info)
 }
 
 /**
- * _getenv - gets the value of an environ variable
- * @info: Structure containing potential arguments. Used to maintain
- * @name: env var name
+ * _getenv - gets the value of an environ variable of the pwd
+ * @info: Structure containing potential arguments. Used to maintain the shell
+ * @name: env var names
  *
  * Return: the value
  */
@@ -36,9 +36,9 @@ char *_getenv(info_t *info, const char *name)
 
 /**
  * _mysetenv - Initialize a new environment variable,
- *             or modify an existing one
+ *             or modify an existing one of the pwd
  * @info: Structure containing potential arguments. Used to maintain
- *        constant function prototype.
+ *        constant function prototype of the console to be created.
  *  Return: Always 0
  */
 int _mysetenv(info_t *info)
@@ -56,7 +56,7 @@ int _mysetenv(info_t *info)
 /**
  * _myunsetenv - Remove an environment variable
  * @info: Structure containing potential arguments. Used to maintain
- *        constant function prototype.
+ *        constant function prototype of the console to be created.
  *  Return: Always 0
  */
 int _myunsetenv(info_t *info)
@@ -75,9 +75,9 @@ int _myunsetenv(info_t *info)
 }
 
 /**
- * populate_env_list - populates env linked list
+ * populate_env_list - populates env linked lists
  * @info: Structure containing potential arguments. Used to maintain
- *          constant function prototype.
+ *          constant function prototype of the onsole to be created.
  * Return: Always 0
  */
 int populate_env_list(info_t *info)
