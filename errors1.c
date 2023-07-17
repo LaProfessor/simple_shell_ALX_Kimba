@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * _erratoi - converts a string to an integer
- * @s: the string to be converted
- * Return: 0 if no numbers in string, converted number otherwise
+ * _erratoi - converts a str to an int
+ * @s: the str to be converted to str
+ * Return: 0 if no num in str, converted numb otherwise
  *       -1 on error
  */
 int _erratoi(char *s)
@@ -12,7 +12,7 @@ int _erratoi(char *s)
 	unsigned long int result = 0;
 
 	if (*s == '+')
-		s++;  /* TODO: why does this make main return 255? */
+		s++;  /* TODO: why does this make main return 255 or the float? */
 	for (i = 0;  s[i] != '\0'; i++)
 	{
 		if (s[i] >= '0' && s[i] <= '9')
@@ -29,10 +29,10 @@ int _erratoi(char *s)
 }
 
 /**
- * print_error - prints an error message
+ * print_error - prints an error msg
  * @info: the parameter & return info struct
- * @estr: string containing specified error type
- * Return: 0 if no numbers in string, converted number otherwise
+ * @estr: str containing specified error type
+ * Return: 0 if no num in str, converted numb otherwise
  *        -1 on error
  */
 void print_error(info_t *info, char *estr)
@@ -47,11 +47,11 @@ void print_error(info_t *info, char *estr)
 }
 
 /**
- * print_d - function prints a decimal (integer) number (base 10)
+ * print_d - function prints a decimal (int) num (base 10)
  * @input: the input
  * @fd: the filedescriptor to write to
  *
- * Return: number of characters printed
+ * Return: num of characters printed
  */
 int print_d(int input, int fd)
 {
@@ -86,12 +86,12 @@ int print_d(int input, int fd)
 }
 
 /**
- * convert_number - converter function, a clone of itoa
- * @num: number
+ * convert_number - converter function, a clone of itoa atoi
+ * @num: num
  * @base: base
  * @flags: argument flags
  *
- * Return: string
+ * Return: str
  */
 char *convert_number(long int num, int base, int flags)
 {
@@ -122,8 +122,8 @@ char *convert_number(long int num, int base, int flags)
 }
 
 /**
- * remove_comments - function replaces first instance of '#' with '\0'
- * @buf: address of the string to modify
+ * remove_comments - function replaces first instance of '#' with '\0' in modification
+ * @buf: address of the str to modify
  *
  * Return: Always 0;
  */
