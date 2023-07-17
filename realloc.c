@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- **_memset - fills mem with a constant bytes
+ **_memset - fills mem with a constants bytes
  *@s: the pointer to the mem area
  *@b: the byte to fill *s with
  *@n: the amount of bytes to be filled
